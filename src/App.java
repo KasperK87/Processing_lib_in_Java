@@ -1,8 +1,11 @@
 import processing.core.PApplet;
 
+
 public class App extends PApplet{
 
     int red = color(0, 255, 0);
+
+    MyObject obj;
 	
 	public static void main(String[] args){
 		String[] processingArgs = {"MySketch"};
@@ -17,15 +20,21 @@ public class App extends PApplet{
     public void setup(){
         frameRate(60);
         rectMode(CENTER);
+
+        obj = new MyObject(this, 0, 0, 100, 100, red);
     }
 
     public void draw(){
         background(0);
         
+        obj.draw();
+
         translate(mouseX, mouseY);
         rotate(radians(frameCount*10));
         
         fill(red);
-        rect(0, 0, 100, 100);
+        rect(0, 0, 100, 100);  
     }
+
+    
 }
