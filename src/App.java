@@ -1,3 +1,4 @@
+import myClasses.MyObject;
 import processing.core.PApplet;
 
 
