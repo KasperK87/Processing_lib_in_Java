@@ -24,6 +24,14 @@ import processing.core.PApplet;
             p.fill(c);
             p.rect(x, y, w, h);
         }
+
+        public void setW(int w){
+            this.w = w;
+        }
+
+        public int getW(){
+            return w;
+        }
     
 }
 

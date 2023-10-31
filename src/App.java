@@ -22,7 +22,7 @@ public class App extends PApplet{
         frameRate(60);
         rectMode(CENTER);
 
-        obj = new MyObject(this, 0, 0, 100, 100, red);
+        obj = new MyObject(this, 0, 0, -100, 100, red);
     }
 
     public void draw(){
@@ -31,10 +31,19 @@ public class App extends PApplet{
         obj.draw();
 
         translate(mouseX, mouseY);
-        rotate(radians(frameCount*10));
+        //rotate(radians(frameCount*10));
         
         fill(red);
-        rect(0, 0, 100, 100);  
+        rect(0, 0, 200, 100); 
+        
+        // code for house
+        fill(255);
+        rect(0, 0, 100, 100);
+        triangle(-50, -50, 50, -50, 0, -100);
+        rect(0, 50, 20, 50);
+        rect(0, -50, 20, 50);
+        rect(50, 0, 20, 100);
+        //rect(-50, 0, 20, 100);
     }
 
     
